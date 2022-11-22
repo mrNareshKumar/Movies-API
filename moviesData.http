@@ -1,0 +1,42 @@
+//API:1 => GET all movie names in the movie table
+###
+GET http://localhost:3000/movies
+
+//API:2 => Add New Movie
+###
+POST http://localhost:3000/addmovie
+Content-Type: application/json
+
+{
+  "movieId": 12,
+  "directorId": 3,
+  "movieName": "The Lord of the Rings",
+  "leadActor": "Elijah Wood"
+}
+
+//API:3 => GET a movie based on the movie ID
+###
+GET http://localhost:3000/movies/48/
+
+//API:4 => Update details of a movie in the movie table based on the movie ID
+###
+PUT http://localhost:3000/movies/48/
+Content-Type: application/json
+
+{
+  "directorId": 24,
+  "movieName": "Thor",
+  "leadActor": "Christopher Hemsworth"
+}
+
+//API:5 => Delete a movie from the movie table based on the movie ID
+###
+DELETE http://localhost:3000/movies/48/
+
+//API:6 => GET a list of all directors in the director table
+###
+GET http://localhost:3000/directors/
+
+//API:7 => GET a list of all movie names directed by a specific director
+###
+GET http://localhost:3000/directors/1/movies
